@@ -1,0 +1,19 @@
+<table class="table hover">
+  <tr>
+    <td>Id</td>
+    <td>Nome</td>
+    <td>Sobrenome</td>
+    <td>Cpf</td>
+    <td>DataNascimento</td>
+    <td>Profissao</td>
+  </tr>
+  <tr *ngFor="let c of clientesService.tabela">
+    <td (click)="Selecionar(c)">{{c.id}}</td>
+    <td (click)="Selecionar(c)">{{c.nome}}</td>
+    <td (click)="Selecionar(c)">{{c.sobrenome}}</td>
+    <td (click)="Selecionar(c)">{{c.cpf}}</td>
+    <td (click)="Selecionar(c)">{{c.dataNascimento}}</td>
+    <td (click)="Selecionar(c)">{{c.profissao}}</td>
+    <td><button (click)="Deletar(c.id)" class="btn btn-sm btn-outline-danger">X</button></td>
+  </tr>
+</table>

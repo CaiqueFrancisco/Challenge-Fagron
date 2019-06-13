@@ -1,0 +1,41 @@
+<form #form="ngForm" (submit)="Inserir(form)">
+  <input type="hidden" name="id" #id="ngModel" [(ngModel)]="clientesService.dataCliente.id" class="form-control" required>
+  <div class="form-row">
+      <div class="form-group col-md-6">
+        <label>Nome</label>
+        <input name="nome" #nome="ngModel" [(ngModel)]="clientesService.dataCliente.nome" class="form-control" required>
+        <div class="validation-error" *ngIf="nome.invalid && nome.touched">Esse campo é obrigatório!</div>
+      </div>
+      <div class="form-group col-md-6">
+        <label>Sobrenome</label>
+        <input name="sobrenome" #sobrenome="ngModel" [(ngModel)]="clientesService.dataCliente.sobrenome" class="form-control" required>
+        <div class="validation-error" *ngIf="nome.invalid && nome.touched">Esse campo é obrigatório!</div>
+      </div>
+  </div>
+  <div class="form-row">
+      <div class="form-group col-md-6">
+          <label>Cpf</label>
+          <input name="cpf" #cpf="ngModel" [(ngModel)]="clientesService.dataCliente.cpf" class="form-control" required>
+          <div class="validation-error" *ngIf="nome.invalid && nome.touched">Esse campo é obrigatório!</div>
+      </div>
+      <div class="form-group col-md-6">
+          <label>Data Nascimento</label>
+          <input name="dataNascimento" #dataNascimento="ngModel" [(ngModel)]="clientesService.dataCliente.dataNascimento" class="form-control" required>
+          <div class="validation-error" *ngIf="nome.invalid && nome.touched">Esse campo é obrigatório!</div>
+      </div>
+  </div>
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label>Idade</label>
+      <input name="idade" #idade="ngModel" [(ngModel)]="clientesService.dataCliente.idade" class="form-control" required>
+      <div class="validation-error" *ngIf="nome.invalid && nome.touched">Esse campo é obrigatório!</div>
+    </div>
+    <div class="form-group col-md-6">
+      <label>Profissão</label>
+      <input name="profissao" #profissao="ngModel" [(ngModel)]="clientesService.dataCliente.profissao" class="form-control">
+    </div>
+  </div>
+  <div class="form-group">
+    <button type="submit" class="btn btn-lg btn-block">Salvar</button>
+  </div>
+</form>
